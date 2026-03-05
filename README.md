@@ -6,7 +6,7 @@ This project implements a **Secure Second-Price Auction** using Asynchronous Mul
 The implementation simulates a distributed environment with $n=4$ parties and a fault tolerance of $f=1$. The protocol ensures that even in the presence of an adversarial party that omits messages, the auction will correctly identify the winner and the second-highest price without revealing individual bids to any single party.
 
 ## 🛠 Technical Architecture
-The system is built on a layered stack of asynchronous cryptographic protocols to handle the lack of a global clock and the presence of faults:
+The system is built on a layered stack of asynchronous cryptographic protocols to handle the presence of faults:
 
 ### 1. Core Agreement Protocols
 * **ABA (Asynchronous Binary Agreement):** Reaches consensus on a single bit using a randomness beacon (common coin) to guarantee termination in an asynchronous setting.
